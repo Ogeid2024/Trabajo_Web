@@ -6,9 +6,10 @@ box-sizing: border-box;
 }
 
 body {
-background-image: url('../Imágenes/fondo1.jpg');
+background-image: url('../Imágenes/fondo2.jpg');
 
 }
+
 
 .form-register {
 width: 400px;
