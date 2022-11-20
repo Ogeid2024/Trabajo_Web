@@ -1,0 +1,112 @@
+*{
+    margin: 20px;
+    padding: 5px;;
+}
+body{
+    background-image: url(../Imágenes/fondo\ 20.jpg);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+h2{
+    font-size: 3.5em;
+ 
+}
+h3{font-size: 2.8em;}
+
+p{
+    font-size: 1.4em;
+}
+#caracteristicas .coteiner{
+    text-align: center;
+}
+caracteristicasL Li{
+    
+}
+
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 2px 2px 10px black;
+    color: wheat;
+    background-color: mediumblue;
+}
+
+.conteiner{
+    max-width: 1400px;
+    margin: auto;
+}
+
+
+#Nuestros-Programas .conteiner{
+    padding: 150px 12px;
+}
+
+#Nuestros-Programas p{
+    display: none;
+    display: block;
+}
+#Nuestros-Programas .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 12px;
+    border-radius: 15px;
+
+
+}
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba( 0,0,0,0.5),
+        rgba( 0,0,0,0.5)
+        
+    )
+    ,url("../IMAGENES/fondo\ 10.jpg");
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 12px;
+
+}
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba( 0,0,0,0.5),
+        rgba( 0,0,0,0.5)
+        
+    )
+    ,url("../IMAGENES/programacion\ 2.jpeg");
+    background-position: center center;
+    background-size: cover;
+
+}
+
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba( 0,0,0,0.5),
+        rgba( 0,0,0,0.5)
+        
+    )
+    ,url("../IMAGENES/programacion\ 3.jpg");
+    background-position: center center;
+    background-size: cover;
+
+}
+.carta:nth-child(4){
+    background-image: linear-gradient(
+        0deg,
+        rgba( 0,0,0,0.5),
+        rgba( 0,0,0,0.5)
+        
+    )
+    ,url("../IMAGENES/programacion\ 4.webp");
+    background-position: center center;
+    background-size: cover;
+}
