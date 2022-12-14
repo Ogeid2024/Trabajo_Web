@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +8,17 @@
     <link rel="stylesheet" href="../css/style5.css">
     <title>Iniciar Sesion</title>
 </head>
+
 <body>
 
 
     <section class="form-acceso">
-        <h4>Ingreso Usuario</h4>
-       <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su correo">
-       <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su contraseña">
-    <p>Estoy de acuerdo con <a href="#"> Terminos y Condiciones</a></p>
-    <input class="botons" type="submit" value="Ingresar">
-    <p><a href="#"> ¿Olvidaste tu crontraseña?</a></p>
+        <h4 id="welcome">Ingreso Usuario</h4>
+        <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su correo">
+        <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su contraseña">
+        <p>Estoy de acuerdo con <a href="#"> Terminos y Condiciones</a></p>
+        <input class="botons" type="submit" id="btningresar" value="Ingresar">
+        <p><a href="#"> ¿Olvidaste tu crontraseña?</a></p>
     </section>
 
     <!-- <main class="Inicio">
@@ -52,6 +54,66 @@
          
     
     </main> -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
 
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDsIL2Nk-iG0iGRivdUxTdUIt7_YZyPl4E",
+            authDomain: "datatechnology-95543.firebaseapp.com",
+            projectId: "datatechnology-95543",
+            storageBucket: "datatechnology-95543.appspot.com",
+            messagingSenderId: "891570156283",
+            appId: "1:891570156283:web:6ee114dff54275c35ab65e"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+        const auth = getAuth();
+
+        //click al botón
+        document.getElementById("btningresar").addEventListener("click", () => {
+            var correoVar = document.getElementById("correo").value;
+            var contraseñaVar = document.getElementById("contraseña").value;
+
+            console.log(correoVar);
+            console.log(contraseñaVar);
+
+            signInWithEmailAndPassword(auth, correoVar, contraseñaVar)
+                .then((userCredential) => {
+                    // Signed in 
+                    const user = userCredential.user;
+                    // ...
+                    console.log("Logeado:");
+                    console.log(user);
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    console.log("Error");
+                    console.log(errorMessage);
+                });
+        });
+
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                // User is signed in, see docs for a list of available properties
+                // https://firebase.google.com/docs/reference/js/firebase.User
+                const email = user.email;
+                document.getElementById("welcome").innerHTML = document.getElementById("welcome").innerHTML + " " + email;
+                // ...
+            } else {
+                // User is signed out
+                // ...
+            }
+        });
+    </script>
 </body>
-</html> 
+
+</html>
