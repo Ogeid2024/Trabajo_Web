@@ -66,7 +66,7 @@ button{
         rgba( 0,0,0,0.5)
         
     )
-    ,url("../IMAGENES/fondo\ 10.jpg");
+    ,url("/Imágenes/fondo\ 10.jpg");
     background-position: center center;
     background-size: cover;
     padding: 50px;
@@ -81,7 +81,7 @@ button{
         rgba( 0,0,0,0.5)
         
     )
-    ,url("../IMAGENES/programacion\ 2.jpeg");
+    ,url("/Imágenes/programacion\ 2.jpeg");
     background-position: center center;
     background-size: cover;
 
@@ -94,7 +94,7 @@ button{
         rgba( 0,0,0,0.5)
         
     )
-    ,url("../IMAGENES/programacion\ 3.jpg");
+    ,url("/Imágenes/programacion\ 3.jpgS");
     background-position: center center;
     background-size: cover;
 
@@ -106,7 +106,7 @@ button{
         rgba( 0,0,0,0.5)
         
     )
-    ,url("../IMAGENES/programacion\ 4.webp");
+    ,url("/Imágenes/programacion\ 4.webp");
     background-position: center center;
     background-size: cover;
 }
